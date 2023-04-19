@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: quarkus-app-template-1
+      author: robin-schneider
+      changes:
+
+        - sql:
+            dbms: h2,postgresql
+            endDelimiter: ;
+            sql: CREATE SCHEMA IF NOT EXISTS quarkus_app_template

@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "a23f8252-59ed-4d17-a9a3-6ca6c5074cc0",
+		"name": "quarkus-app-template",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "contract",
+			"item": [
+				{
+					"name": "/contract (ok, 200)",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/v1/contract?name=Versicherung 1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"v1",
+								"contract"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Versicherung 1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/contract (not found, 404)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/v1/contract?name=test",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"v1",
+								"contract"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/contract/all (ok, 200)",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/v1/contract/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"v1",
+								"contract",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hello",
+			"item": [
+				{
+					"name": "/hello/plain",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/hello/plain",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"hello",
+								"plain"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/hello/json",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/hello/json",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"hello",
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/hello/prop",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/hello/prop",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"hello",
+								"prop"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

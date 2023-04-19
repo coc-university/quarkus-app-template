@@ -1,0 +1,61 @@
+openapi: 3.0.3
+
+info:
+  x-audience: component-internal
+  title: Vertragsservice
+  description: Demo Anwendung
+  contact:
+    email: demo-mail.de
+  version: 1.0.0
+
+servers:
+  - url: http://webservices/services/vertragsservice-demo/api/
+    description: fiktive url
+
+tags:
+  - name: v1
+
+paths:
+  /v1/contract:
+    get:
+      tags:
+        - v1
+      summary: Abfragen des Vertrags
+      description: Abfragen des Vertrags
+      operationId: getContract
+      security:
+        - OAuth2: []
+      parameters:
+        - in: query
+          name: name
+          required: true
+          description: Name des Vertrags
+          example: 'Test'
+          schema:
+            type: string
+      responses:
+        200:
+          $ref: '#/components/responses/200'
+        404:
+          $ref: '#/components/responses/404'
+
+components:
+
+  responses:
+    200:
+      description: Der Vertrag wurde gefunden
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ContractResponse'
+
+  schemas:
+    ContractResponse:
+      description: "description"
+      type: object
+      properties:
+        title:
+          type: string
+          description: "description"
+      example:
+        title: "title"
