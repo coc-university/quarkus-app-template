@@ -23,9 +23,9 @@
 
 - other annotations (@GET + @Path vs @GetMapping)
 - explicit @Produces should be used to avoid wrong type
+- [annotation comparison]https://quarkus.io/guides/spring-web#conversion-table
 - check that resteasy dependency has jackson on board
 - otherwise the controller can not convert the java object
-- no explicit annotation required on the controller class
 
 ### Business
 
